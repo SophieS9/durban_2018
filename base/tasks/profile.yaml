@@ -3,7 +3,7 @@
   become: true
   become_user: master 
 
-- name: Change bash PS1 promt colour etc
+- name: Change bash PS1 prompt colour etc
   copy: src="{{playbook_dir}}/files/bash_profile" dest=/home/master/.bash_profile
   become: true
   become_user: master
