@@ -3,7 +3,7 @@ Instructions and notes for creating the AMI for the [Workshop on Microbiome and 
 
 This repository is a direct copy from Guy Leonard's Evomics 2017 repository (https://github.com/guyleonard/evomics_2017) and all credit for everything here should be given to him. I have modified the scripts for my own use with this AMI. Please refer to his repo for more details of the base AMI and what the ansible scripts are doing...
 
-Install notes for additional software added for Durban 2018 can be found in : FILE TO COME... 
+Install notes for additional software added for Durban 2018 can be found in [install_notes.md](./install_notes.md) 
 
 # Base Image
 TO UPDATE
