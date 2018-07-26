@@ -131,38 +131,38 @@
     ## Previously Installed
     # FastQC, fastq-mcf, seqtk, blasr
 
-    - include: software_tasks/pilon.yaml version=1.21
-      tags: genomics, pilon
+    #- include: software_tasks/pilon.yaml version=1.21
+    #  tags: genomics, pilon
 
-    - name: Installing vcftools
-      apt: name=vcftools state=present
-      tags: genomics, vcftools
+    #- name: Installing vcftools
+    #  apt: name=vcftools state=present
+    #  tags: genomics, vcftools
 
-    - name: Installing mummer
-      apt: name=mummer state=present
-      tags: genomics, mummer, circlator, amos
+    #- name: Installing mummer
+    #  apt: name=mummer state=present
+    #  tags: genomics, mummer, circlator, amos
 
-    - include: software_tasks/amos.yaml version=3.1.0
-      tags: genomics, amos, circlator, minimus2
+    #- include: software_tasks/amos.yaml version=3.1.0
+    #  tags: genomics, amos, circlator, minimus2
 
-    - name: Installing Circlator
-      pip: name=circlator executable=pip3
-      tags: genomics, circlator
+    #- name: Installing Circlator
+    #  pip: name=circlator executable=pip3
+    #  tags: genomics, circlator
 
-    - include: software_tasks/krona.yaml version=2.7
-      tags: genomics, krona
+    #- include: software_tasks/krona.yaml version=2.7
+    #  tags: genomics, krona
 
-    - include: software_tasks/minimap.yaml
-      tags: genomics, minimap, miniasm, assembly
+    #- include: software_tasks/minimap.yaml
+    #  tags: genomics, minimap, miniasm, assembly
      
-    - include: software_tasks/miniasm.yaml
-      tags: genomics, minimap, minias, assembly
+    #- include: software_tasks/miniasm.yaml
+    #  tags: genomics, minimap, minias, assembly
 
-    - include: software_tasks/nanopolish.yaml
-      tags: genomics, nanopolish, assembly
+    #- include: software_tasks/nanopolish.yaml
+    #  tags: genomics, nanopolish, assembly
 
-    - include: software_tasks/poretools.yaml
-      tags: genomics, poretools, assembly
+    #- include: software_tasks/poretools.yaml
+    #  tags: genomics, poretools, assembly
 
     # installs bowtie 1 and 2
     - include: software_tasks/bowtie.yaml version=2.2.9
@@ -171,7 +171,7 @@
     - include: software_tasks/bwa.yaml
       tags: genomics, bwa, gatb, circlator
       
-    - include: software_tasks/samtools.yaml version=1.3.1
+    - include: software_tasks/samtools.yaml version=1.9
       tags: genomics, samtools, transcriptomics
 
     - include: software_tasks/bcftools.yaml version=1.3.1
