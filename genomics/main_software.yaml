@@ -8,9 +8,9 @@
     # sha-512 hash
     - genomics_user_password: $6$xsb/UrhJ$sxievieZ7erTF93MwiBEZqm/mIpTVlTd3uhYGY2Urt5qoGapG3ZEU6NrGMOYd7QUnFfXhgDn12OPxDuxb20dB0
     # mysql native hash - SELECT PASSWORD("password") - also need to set in stacks_web.yaml
-    - stacks_user_password: '*39094635b39efded76637451cdbd294d41865007'
+    #- stacks_user_password: '*39094635b39efded76637451cdbd294d41865007'
     # jupyter password https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#preparing-a-hashed-password
-    - jupyter_password: 'sha1:0909a8ee63e4:7c0d5e80d50acbdc07d9e7f3ac66d028713e2825'
+    #- jupyter_password: 'sha1:0909a8ee63e4:7c0d5e80d50acbdc07d9e7f3ac66d028713e2825'
     
   pre_tasks:
     # Set up the workshop user with a SHA-512 crypted password using mkpasswd
@@ -96,14 +96,14 @@
     - include: software_tasks/seqtk.yaml
       tags: genomics, seqdqc, seqtk
       
-    - include: software_tasks/trim_galore.yaml version=0.4.1
+    - include: software_tasks/trim_galore.yaml version=0.5.0
       tags: seqdqc, trim_galore
     
     - name: Installing cutadapt
       pip: name=cutadapt state=present
       tags: seqdqc, cutadapt
 
-    - name: Install ea-utils 1.04.676, trimmomatic, fastqc 0.11.4
+    - name: Install ea-utils 1.04.676, trimmomatic
       apt: name={{item}} state=present
       with_items:
        - ea-utils
@@ -111,16 +111,20 @@
       tags: genomics, seqdqc
       
     # The Ubuntu fastqc package is broken!
-    - include: software_tasks/fastqc.yaml version=0.11.5
+    - include: software_tasks/fastqc.yaml version=0.11.7
       tags: fastqc
+
+    - name: Installing multiqc
+      pip: name=multiqc state=present
+      tags: seqdqc, multiqc
 
 
     ### Alignment Methods ###
     # This requires > 4GB memory to install, so we ignore the errors
     # to allow the rest of the play to run through
-    - include: software_tasks/blasr.yaml
-      tags: alignment, genomics, blasr
-      ignore_errors: yes
+    #- include: software_tasks/blasr.yaml
+    #  tags: alignment, genomics, blasr
+    #  ignore_errors: yes
 
 
     ### Genomics ###
