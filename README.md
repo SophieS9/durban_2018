@@ -6,8 +6,7 @@ This repository is a direct copy from Guy Leonard's Evomics 2017 repository (htt
 Install notes for additional software added for Durban 2018 can be found in [install_notes.md](./install_notes.md) 
 
 # Base Image
-TO UPDATE
-We will be using the latest Ubuntu Linux as our initial AMI, in this case: [ami-cf68e0d8](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-cf68e0d8) which is the 'us-east-1'	copy of Ubuntu Xenial Xerus 16.04 LTS. But you should be able to use any Debian based version of Linux, ansible will stop on errors but it can also be resumed from that point. I am assuming that you have an AWS account and have already initialised the above AMI for this README.
+We will be using the latest Ubuntu Linux as our initial AMI, in this case: [ami-759bc50a](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-759bc50a) which is the 'us-east-1' copy of Ubuntu Xenial Xerus 16.04 LTS. But you should be able to use any Debian based version of Linux, ansible will stop on errors but it can also be resumed from that point. I am assuming that you have an AWS account and have already initialised the above AMI for this README.
 
 ## Base AMI Setup
 

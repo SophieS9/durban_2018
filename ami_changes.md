@@ -23,8 +23,8 @@ There are three users to change: genomics, phylogenomics, master and one mysql p
 ## Generate Crypted Password for MySql
     SELECT PASSWORD("password")
 
-# 2017 Base AMI
-We will be using the latest Ubuntu Linux as our initial AMI, in this case: [ami-cf68e0d8](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-cf68e0d8) which is the 'us-east-1'	copy of Ubuntu Xenial Xerus 16.04 LTS.
+## Base AMI
+We will be using the latest Ubuntu Linux as our initial AMI, in this case: [ami-ami-759bc50a](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-759bc50a) which is the 'us-east-1'	copy of Ubuntu Xenial Xerus 16.04 LTS.
 
 ## Storage & Virtualisation Type
 It can be quite a confusing mess of choices, but Amazon has some guides [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html) and so we will be using:
@@ -52,12 +52,6 @@ It can be quite a confusing mess of choices, but Amazon has some guides [here](h
 ## Genomics Specific
  * Background Wallpaper
  * user: genomics
-  * password: $6$xsb/UrhJ$sxievieZ7erTF93MwiBEZqm/mIpTVlTd3uhYGY2Urt5qoGapG3ZEU6NrGMOYd7QUnFfXhgDn12OPxDuxb20dB0
+ * password: $6$xsb/UrhJ$sxievieZ7erTF93MwiBEZqm/mIpTVlTd3uhYGY2Urt5qoGapG3ZEU6NrGMOYd7QUnFfXhgDn12OPxDuxb20dB0
  * bioconda
-All other software can be found in the 'genomics' task folder and playbooks.
-
-## Phylogenomics Specific
-* Background Wallpaper
-* user: phylogenomics
- * password: $6$xsb/UrhJ$sxievieZ7erTF93MwiBEZqm/mIpTVlTd3uhYGY2Urt5qoGapG3ZEU6NrGMOYd7QUnFfXhgDn12OPxDuxb20dB0 
 All other software can be found in the 'genomics' task folder and playbooks.
