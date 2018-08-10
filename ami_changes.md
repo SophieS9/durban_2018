@@ -24,7 +24,7 @@ There are three users to change: genomics, phylogenomics, master and one mysql p
     SELECT PASSWORD("password")
 
 ## Base AMI
-We will be using the latest Ubuntu Linux as our initial AMI, in this case: [ami-ami-759bc50a](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-759bc50a) which is the 'us-east-1'	copy of Ubuntu Xenial Xerus 16.04 LTS.
+We will be using the latest Ubuntu Linux as our initial AMI, in this case: [ami-759bc50a](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-759bc50a) which is the 'us-east-1'	copy of Ubuntu Xenial Xerus 16.04 LTS.
 
 ## Storage & Virtualisation Type
 It can be quite a confusing mess of choices, but Amazon has some guides [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html) and so we will be using:
