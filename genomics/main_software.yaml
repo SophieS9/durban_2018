@@ -276,7 +276,7 @@
 
     - name: Installing ggplot2
       shell: "{{playbook_dir}}/scripts/install.r ggplot2"
-    §  tags: r, ggplot2
+      tags: r, ggplot2
 
 
     ### QIIME ###
@@ -320,41 +320,41 @@
     ## Previously Installed
     # MySQL (MariaDB) in Base Install
 
-    - name: Installing Stacks Dependencies
-      apt: name={{item}} state=present
-      with_items:
-       - libdbd-mysql-perl
-       - libsparsehash-dev
-       - php7.0
-       - php7.0-mysql
-       - python-mysqldb
-       - libspreadsheet-writeexcel-perl
-      tags: radseq, stacks
+    #- name: Installing Stacks Dependencies
+    #  apt: name={{item}} state=present
+    #  with_items:
+    #   - libdbd-mysql-perl
+    #   - libsparsehash-dev
+    #   - php7.0
+    #   - php7.0-mysql
+    #   - python-mysqldb
+    #   - libspreadsheet-writeexcel-perl
+    #  tags: radseq, stacks
  
-    - include: software_tasks/stacks.yaml version=1.44
-      tags: radseq, stacks
+    #- include: software_tasks/stacks.yaml version=1.44
+    #  tags: radseq, stacks
 
-    - include: software_tasks/stacks_web.yaml
-      tags: radseq, stacks, stacksweb
+    #- include: software_tasks/stacks_web.yaml
+    #  tags: radseq, stacks, stacksweb
 
-    - include: software_tasks/raxml.yaml
-      tags: radseq, raxml, trees
+    #- include: software_tasks/raxml.yaml
+    #  tags: radseq, raxml, trees
 
-    - name: Install gnuplot
-      apt: name=gnuplot state=present
-      tags: radseq, gnuplot
+    #- name: Install gnuplot
+    #  apt: name=gnuplot state=present
+    #  tags: radseq, gnuplot
 
     # The default is to disable sse2 and sse4.1 extensions
     # as we have been burned before by some Amazon instances
     # not having those extensions available! 
-    - include: software_tasks/gmap_gsnap.yaml version=2016-08-24
-      tags: radseq, gmap, gsnap, transcriptomics
+    #- include: software_tasks/gmap_gsnap.yaml version=2016-08-24
+    #  tags: radseq, gmap, gsnap, transcriptomics
    
-    - include: software_tasks/structure_console.yaml version=2.3.4
-      tags: radseq, structure
+    #- include: software_tasks/structure_console.yaml version=2.3.4
+    #  tags: radseq, structure
 
-    - include: software_tasks/structure_frontend.yaml version=2.3.4
-      tags: radseq, structure
+    #- include: software_tasks/structure_frontend.yaml version=2.3.4
+    #  tags: radseq, structure
 
 
     ### Transcriptomics ###
