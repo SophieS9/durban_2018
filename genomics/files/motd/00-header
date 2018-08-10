@@ -5,11 +5,11 @@ if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
   DISTRIB_DESCRIPTION=$(lsb_release -s -d)
 fi
 printf "\n"
-printf "############################################\n"
-printf "##        Workshop on Genomics 2017       ##\n"
-printf "##              Cesky Krumlov             ##\n"
-printf "##         @evomics #evomics2017          ##\n"
-printf "############################################\n"
+printf "###########################################################\n"
+printf "##   Workshop on Microbiome and Transcriptome Analysis   ##\n"
+printf "##                        Durban 			 ##\n"
+printf "##	             7-12 October 2018                   ##\n"
+printf "###########################################################\n"
 printf "\n\n"
 printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "$(uname -r)"
 printf "\n"
