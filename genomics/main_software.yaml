@@ -6,7 +6,7 @@
     - software_dir: "/home/{{workshop_user}}/software"
     - workshop_dir: "/home/{{workshop_user}}/workshop_materials"
     # sha-512 hash
-    - genomics_user_password: $6$xsb/UrhJ$sxievieZ7erTF93MwiBEZqm/mIpTVlTd3uhYGY2Urt5qoGapG3ZEU6NrGMOYd7QUnFfXhgDn12OPxDuxb20dB0
+    - genomics_user_password: $6$aeo311XfO$EaMB/xwcu/vD0t7/4kgfQU3pR45yvM2TXiI5o38Sv2cCP1soOwBA1c6kOZ1qTia4nwuRwDYNg35dbnxzCnXIs.
     # mysql native hash - SELECT PASSWORD("password") - also need to set in stacks_web.yaml
     #- stacks_user_password: '*39094635b39efded76637451cdbd294d41865007'
     # jupyter password https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#preparing-a-hashed-password
@@ -206,10 +206,11 @@
     #  file: src=/usr/bin/fasttreeMP dest=/usr/bin/FastTreeMP state=link
     #  tags: genomics, fasttree
       
-    - include: software_tasks/igv.yaml version=2.3.80
+    - include: software_tasks/igv.yaml version=2.4.10 sub=2.4
       tags: genomics, igv, transcriptomics
-    - include: software_tasks/igvtools.yaml version=2.3.80
-      tags: genomics, igvtools, transcriptomics
+#IGV tools not in the broad link any more. Will only fix if needed
+#    - include: software_tasks/igvtools.yaml version=2.4.10 sub=2.4
+#      tags: genomics, igvtools, transcriptomics
       
    # - name: Install bedtools
    #   apt: name=bedtools state=present
@@ -297,8 +298,8 @@
       tags: qiime, metagenomics
 
     # conda environment install qiime1
-    - include: software_tasks/qiime_env.yaml
-      tags: qiime, metagenomics 
+    #- include: software_tasks/qiime_env.yaml
+    #  tags: qiime, metagenomics 
 
     # conda environment install qiime2
     - include: software_tasks/qiime2_env.yaml
