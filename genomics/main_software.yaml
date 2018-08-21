@@ -305,8 +305,8 @@
     #- include: software_tasks/qiime2_env.yaml
     #  tags: qiime2, metagenomics
 
-    - include: software_tasks/jupyter.yaml
-      tags: qiime, qiime2, jupyter, metagenomics
+    #- include: software_tasks/jupyter.yaml
+    #  tags: qiime, qiime2, jupyter, metagenomics
     
 
     ### PhyloSeq ###
