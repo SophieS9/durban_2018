@@ -301,9 +301,9 @@
     #- include: software_tasks/qiime_env.yaml
     #  tags: qiime, metagenomics 
 
-    # conda environment install qiime2
-    - include: software_tasks/qiime2_env.yaml
-      tags: qiime2, metagenomics
+    # conda environment install qiime2 - DOING MANUALLY FOR NOW
+    #- include: software_tasks/qiime2_env.yaml
+    #  tags: qiime2, metagenomics
 
     - include: software_tasks/jupyter.yaml
       tags: qiime, qiime2, jupyter, metagenomics

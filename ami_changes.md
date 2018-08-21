@@ -52,6 +52,6 @@ It can be quite a confusing mess of choices, but Amazon has some guides [here](h
 ## Genomics Specific
  * Background Wallpaper
  * user: genomics
- * password: $6$xsb/UrhJ$sxievieZ7erTF93MwiBEZqm/mIpTVlTd3uhYGY2Urt5qoGapG3ZEU6NrGMOYd7QUnFfXhgDn12OPxDuxb20dB0
+ * password: $6$aeo311XfO$EaMB/xwcu/vD0t7/4kgfQU3pR45yvM2TXiI5o38Sv2cCP1soOwBA1c6kOZ1qTia4nwuRwDYNg35dbnxzCnXIs.
  * bioconda
 All other software can be found in the 'genomics' task folder and playbooks.
