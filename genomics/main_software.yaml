@@ -212,9 +212,9 @@
 #    - include: software_tasks/igvtools.yaml version=2.4.10 sub=2.4
 #      tags: genomics, igvtools, transcriptomics
       
-   # - name: Install bedtools
-   #   apt: name=bedtools state=present
-   #   tags: genomics, bedtools
+    - name: Install bedtools
+      apt: name=bedtools state=present
+      tags: genomics, bedtools
 
     - include: software_tasks/qualimap.yaml version=2.2
       tags: genomics, qualimap
