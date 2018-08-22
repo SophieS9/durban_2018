@@ -18,4 +18,4 @@ cd STAR-2.6.0a/source
 make STAR
 sudo cp ./STAR /usr/local/bin
 ```
-
+* GSEA downloaded from [here](http://software.broadinstitute.org/gsea/downloads.jsp). The GUI is launched directly from the website. Downloaded the command line jar file  
