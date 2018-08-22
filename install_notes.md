@@ -18,4 +18,7 @@ cd STAR-2.6.0a/source
 make STAR
 sudo cp ./STAR /usr/local/bin
 ```
-* GSEA downloaded from [here](http://software.broadinstitute.org/gsea/downloads.jsp). The GUI is launched directly from the website. Downloaded the command line jar file  
+* GSEA downloaded from [here](http://software.broadinstitute.org/gsea/downloads.jsp). The GUI is launched directly from the website and is also available as an icon on the desktop. Downloaded the command line jar file and saved in ~/software. This is launched as follows:
+```
+java -jar /home/genomics/software/gsea-3.0.jar
+```
