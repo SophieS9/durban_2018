@@ -22,3 +22,19 @@ sudo cp ./STAR /usr/local/bin
 ```
 java -jar /home/genomics/software/gsea-3.0.jar
 ```
+* Additional R packages installed as follows:
+```
+install.packages("tidyverse")
+
+source("http://www.bioconductor.org/biocLite.R")
+biocLite("microbiome")
+
+install.packages("ggpubr")
+
+install.packages("UpSetR")
+
+source("https://bioconductor.org/biocLite.R")
+biocLite("ggtree")
+
+devtools::install_github("benjjneb/dada2")
+```
