@@ -3,33 +3,33 @@
   register: qiime2_env_installed
 
 - name: Install QIIME2 from Conda
-  shell: "/home/{{workshop_user}}/miniconda3/bin/conda create --update-deps -n qiime2 -c qiime2 python=3.5 qiime q2cli"
+  shell: "/home/{{workshop_user}}/miniconda3/bin/conda create -n qiime2-2018.6 --file https://data.qiime2.org/distro/core/qiime2-2018.6-py35-linux-conda.yml"
   become: true
   become_user: "{{workshop_user}}"
   when: qiime2_env_installed.stat.exists == false
 
-- name: Install QIIME2 Plugins MatPlotLib
-  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 matplotlib==1.5.1"
-  become: true
-  become_user: "{{workshop_user}}"
+#- name: Install QIIME2 Plugins MatPlotLib
+#  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 matplotlib==1.5.1"
+#  become: true
+#  become_user: "{{workshop_user}}"
 
-- name: Install QIIME2 Plugins q2-types q2-feature-table
-  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c qiime2 q2-types q2-feature-table"
-  become: true
-  become_user: "{{workshop_user}}"
+#- name: Install QIIME2 Plugins q2-types q2-feature-table
+#  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c qiime2 q2-types q2-feature-table"
+#  become: true
+#  become_user: "{{workshop_user}}"
 
-- name: Install QIIME2 Plugins conda-forge q2-diversity q2-emperor
-  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c qiime2 -c conda-forge q2-diversity q2-emperor emperor=1.0.0beta5"
-  become: true
-  become_user: "{{workshop_user}}"
+#- name: Install QIIME2 Plugins conda-forge q2-diversity q2-emperor
+#  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c qiime2 -c conda-forge q2-diversity q2-emperor emperor=1.0.0beta5"
+#  become: true
+# become_user: "{{workshop_user}}"
 
-- name: Install QIIME2 Plugins fasttree
-  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c biocore fasttree"
-  become: true
-  become_user: "{{workshop_user}}"
+#- name: Install QIIME2 Plugins fasttree
+#  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c biocore fasttree"
+#  become: true
+#  become_user: "{{workshop_user}}"
 
-- name: Install QIIME2 Plugins q2-demux q2-alignment q2-phylogeny q2-dada2...
-  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c qiime2 q2-demux q2-alignment q2-phylogeny q2-dada2 q2-composition q2-taxa q2-feature-classifier"
-  become: true
-  become_user: "{{workshop_user}}"
+#- name: Install QIIME2 Plugins q2-demux q2-alignment q2-phylogeny q2-dada2...
+#  shell: "/home/{{workshop_user}}/miniconda3/bin/conda install -n qiime2 -c qiime2 q2-demux q2-alignment q2-phylogeny q2-dada2 q2-composition q2-taxa q2-feature-classifier"
+#  become: true
+#  become_user: "{{workshop_user}}"
 

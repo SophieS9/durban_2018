@@ -7,16 +7,16 @@ working_dir=$(pwd)
 
 ## Ansible
 # Setup Ansible
-sudo apt-get update # need to update on first run
-sudo apt-get install -y git python-pip python-dev python-cffi libssl-dev debconf-utils libaio1 aptitude
-sudo -H pip install --upgrade pip
-sudo -H pip install ansible
+#sudo apt-get update # need to update on first run
+#sudo apt-get install -y git python-pip python-dev python-cffi libssl-dev debconf-utils libaio1 aptitude
+#sudo -H pip install --upgrade pip
+#sudo -H pip install ansible
 
 # as much as I love cowsay, lets turn it off so Ansible's messages aren't cows
 export ANSIBLE_NOCOWS=1
 
-# Clone the Evomics 2017 github repo
-git clone https://github.com/SophieS9/durban_2018.git
+# Clone the Durban 2018 github repo
+#git clone https://github.com/SophieS9/durban_2018.git
 
 # hoping this helps with mysql install issues!
 export DEBIAN_FRONTEND=noninteractive

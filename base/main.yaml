@@ -1,24 +1,21 @@
-	- hosts: all
-	  become: yes
-	  vars:
-	    - source_dir: /home/ubuntu/software/.source
-	    - software_dir: /home/ubuntu/software
-	#UPDATE PASSWORDS ONCE WORKING ON AWS
-	    - mysql_root_pass: '*522F526859693BE4EBF948CA2FC0A25326CFD84E'
-	    - master_password: '$6$vaUtdo8oSgvGmBNO$B/0gxyOCv5b1DWGaiOTBUdZdHW5nrXZhUNw1yu8pVL5LS8Hs3DxL3/rD0aBEx9h7kNpDi73UZ3XYd7wpbXAx90'
-
-	  pre_tasks:
-	    # Create Directories
-	    - name: Create Software Dir
-	      file: path={{software_dir}} state=directory
-	    - name: Create Software Source Dir
-	      file: path={{source_dir}} state=directory
-	      
-	    # Set up workhsop group  
-	    - name: Create "workshop" group
-	      group: name=workshop state=present
-	      
-	    # Set up the workshop user with a SHA-512 crypted password using mkpasswd
+ - hosts: all
+   become: yes
+   vars:
+    - source_dir: /home/ubuntu/software/.source
+    - software_dir: /home/ubuntu/software
+#    - mysql_root_pass: '*522F526859693BE4EBF948CA2FC0A25326CFD84E'
+    - master_password: '$6$8yvnUV/K5F$nI0sebTW9Wg8a9mgJBvpUU53LvFANe63JCYqw.M5xKLW5quv.nyvHS5n/xal5gb8ephniagZMVumMPX4j7osc.'
+  
+   pre_tasks:
+    # Create Directories
+    - name: Create Software Dir
+      file: path={{software_dir}} state=directory
+    - name: Create Software Source Dir
+      file: path={{source_dir}} state=directory
+   # Set up workshop group  
+    - name: Create "workshop" group
+      group: name=workshop state=present
+   # Set up the workshop user with a SHA-512 crypted password using mkpasswd
     - name: Create 'master' Workshop User with SUDO privileges
       user: name=master group=workshop comment="Master Workshop User" state=present shell=/bin/bash groups="workshop,sudo" password="{{master_password}}"
     
@@ -36,7 +33,7 @@
     - name: Restart SSH Daemon
       service: name=ssh state=restarted
 
-  tasks:
+   tasks:
     # The Dreaded MySQL
     # It still hangs during install
     # but mariadb does not.
