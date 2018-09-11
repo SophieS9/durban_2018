@@ -38,3 +38,10 @@ biocLite("ggtree")
 
 devtools::install_github("benjjneb/dada2")
 ```
+
+* Manually updated the desktop background image
+
+* Changed timezone for Durban as follows:
+```
+sudo timedatectl set-time Africa/Johannesburg
+```
