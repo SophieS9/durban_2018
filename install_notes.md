@@ -45,3 +45,9 @@ devtools::install_github("benjjneb/dada2")
 ```
 sudo timedatectl set-time Africa/Johannesburg
 ```
+* BBTools downloaded from SourceForge [here](https://sourceforge.net/projects/bbmap/), unpackaged and copied all scripts to bin as su master.
+```
+wget https://sourceforge.net/projects/bbmap/files/BBMap_38.23.tar.gz
+tar -xzvf BBMAP_38.23.tar.gz 
+sudo cp -r ./bbmap/* /usr/local/bin
+```
