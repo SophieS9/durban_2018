@@ -37,6 +37,10 @@ source("https://bioconductor.org/biocLite.R")
 biocLite("ggtree")
 
 devtools::install_github("benjjneb/dada2")
+
+install.packages("pheatmap")
+
+install.packages("ggdendro")
 ```
 
 * Manually updated the desktop background image
