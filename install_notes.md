@@ -51,3 +51,7 @@ wget https://sourceforge.net/projects/bbmap/files/BBMap_38.23.tar.gz
 tar -xzvf BBMAP_38.23.tar.gz 
 sudo cp -r ./bbmap/* /usr/local/bin
 ```
+* MetaPhlAn2 installed via bioconda
+```
+conda install metaphlan2 -c bioconda
+```
