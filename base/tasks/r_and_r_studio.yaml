@@ -29,7 +29,7 @@
 
 - name: Download Rstudio Server
   get_url:
-    url=https://download2.rstudio.org/rstudio-server-0.99.903-amd64.deb
+    url=https://download2.rstudio.org/rstudio-server-1.1.456-amd64.deb
     dest={{source_dir}}/rstudio-server-1.1.456-amd64.deb
 
 - name: Installing Rstudio Server
