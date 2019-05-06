@@ -47,7 +47,7 @@ install.packages("ggdendro")
 
 * Changed timezone for Durban as follows:
 ```
-sudo timedatectl set-time Africa/Johannesburg
+sudo timedatectl set-timezone Africa/Johannesburg
 ```
 * BBTools downloaded from SourceForge [here](https://sourceforge.net/projects/bbmap/), unpackaged and copied all scripts to bin as su master.
 ```
